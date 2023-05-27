@@ -1,0 +1,28 @@
+.navigation-bar {
+  display: flex;
+  gap: 32px;
+  padding: 0;
+}
+
+.navigation-bar__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+
+  font-size: 12px;
+  font-weight: bold;
+
+  line-height: 11px;
+  letter-spacing: 0.04em;
+
+  text-decoration: none;
+  text-transform: uppercase;
+  color: black;
+
+  transition: color 0.3s ease;
+}
+
+.navigation-bar__item--is-active {
+  color: #1769aa;
+}
