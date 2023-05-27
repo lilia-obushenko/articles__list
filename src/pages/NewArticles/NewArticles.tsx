@@ -37,5 +37,3 @@ export const NewArticles = () => {
     </div>
   )
 }
-
-export default NewArticles
