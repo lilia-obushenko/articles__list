@@ -1,14 +1,16 @@
 import { useEffect, useState } from "react";
 import { Article } from "../../typedefs";
 import { NewList } from "../../components/NewList/NewList";
-import client from '../../app/fetching';
+import { apiUrl } from '../../app/fetching';
 
 export const NewArticles = () => {
   const [articles, setArticles] = useState<Article[]>([]);
 
   const getArticles = async () => {
     try {
-      const data = await client.getArticles();
+      const response = await fetch(apiUrl);
+
+      const data = await response.json();
 
       setArticles(data.articles);
     } catch (error) {
