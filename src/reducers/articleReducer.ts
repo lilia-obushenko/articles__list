@@ -30,17 +30,17 @@ export const articleReducer = (articles: Article[] = [], action: Action) => {
       );
 
     case 'articles/Pin':
-    const pinnedArticleIndex = articles.findIndex(
-      article => article.title === action.payload,
-    );
+      const pinnedArticleIndex = articles.findIndex(
+        article => article.title === action.payload,
+      );
 
-    if (pinnedArticleIndex !== -1) {
-      const pinnedArticle = articles.splice(pinnedArticleIndex, 1)[0];
+      if (pinnedArticleIndex !== -1) {
+        const pinnedArticle = articles.splice(pinnedArticleIndex, 1)[0];
 
-      return [pinnedArticle, ...articles];
-    }
+        return [pinnedArticle, ...articles];
+      }
 
-    return articles;
+      return articles;
 
     default:
       return articles;
